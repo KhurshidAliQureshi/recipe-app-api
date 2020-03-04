@@ -9,9 +9,5 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-RUN adduser \
-    --disabled-password \
-    --gecos "" \
-    --home /app \
-    app
+RUN adduser -D user
 USER user
